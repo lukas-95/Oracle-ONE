@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    
+        function pulaLinha() {
+    
+            document.write("<br>");
+        }
+    
+        function mostra(frase) {
+    
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function sorteia(n) {
+
+            return Math.round(Math.random() * n);
+            
+        }
+    
+        var numeroPensado = sorteia(10)
+
+
+        var tentativas = 1;
+        while (tentativas <= 3) {
+
+        var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+    
+        if(chute == numeroPensado) {
+    
+            mostra("Uau! Você ACERTOU, pois eu pensei no " + numeroPensado);
+            break;
+        } else {
+    
+            if(chute > numeroPensado) {
+
+                mostra("Você ERROU! Seu chute é MAIOR que o número pensado! Que era: " + numeroPensado);
+
+            } else {
+
+                mostra("Você ERROU! Seu chute é MENOR que o número pensado! Que era: " + numeroPensado);
+            }
+        }
+
+        tentativas++;
+            
+        }
+        mostra("FIM")
+    
+        
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
